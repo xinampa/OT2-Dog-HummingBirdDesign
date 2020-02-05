@@ -1,8 +1,8 @@
-from opentrons import protocol_api
+from opentrons import protocal_api
 
+def run(protocol: protocol_api.ProtocolContext):
 # metadata
 metadata = {
-
     'apiLevel': '2.0',
     'protocolName': 'Dog Demo',
     'author': 'NoviceDesigner',
@@ -10,13 +10,13 @@ metadata = {
     }
 
 # a 12 row trough for sources
-trough = labware.load('trough-12row', 8)
+porotcal.load_labware('trough-12row', 8)
 
 # plate to create dog in
-plate = labware.load('96-PCR-flat', 3)
+porotcal.load_labware('96-PCR-flat', 3)
 
 # a tip rack for our pipette
-p200rack = labware.load('tiprack-200ul', 6)
+protocol.load_instrument('tiprack-200ul', 6)
 
 # wells to dispense dog body in yellow
 yellow_wells = [
